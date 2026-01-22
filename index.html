@@ -1,27 +1,111 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
- </head>
- <body bg color = pink>
-  <h1>I Love You suduuuuuuuu ❤️</h1>
+    <title>Love Message</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
- </body>
- </html>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b9d, #c06c84, #f67280, #355c7d);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow: hidden;
+            position: relative;
+        }
 
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 30px;
+            animation: float 8s infinite;
+        }
 
-<!-- TODO 4: Add titles/subtitles etc. -->
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-<!-- TODO 5: Add a link to the project pages -->
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 2s; font-size: 40px; }
+        .heart:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .heart:nth-child(4) { left: 40%; animation-delay: 1s; font-size: 35px; }
+        .heart:nth-child(5) { left: 50%; animation-delay: 5s; }
+        .heart:nth-child(6) { left: 60%; animation-delay: 3s; font-size: 45px; }
+        .heart:nth-child(7) { left: 70%; animation-delay: 6s; }
+        .heart:nth-child(8) { left: 80%; animation-delay: 2.5s; font-size: 38px; }
+        .heart:nth-child(9) { left: 90%; animation-delay: 4.5s; }
 
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
+        .message {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                         0 0 40px rgba(255, 107, 157, 0.6),
+                         0 0 60px rgba(192, 108, 132, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+            z-index: 10;
+            position: relative;
+            padding: 20px;
+        }
 
-<!-- TODO 7: Add the Contact Me and About Me page links -->
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .message {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+
+    <div class="message">
+        I Love youuu Suduuuuuuu❤️
+    </div>
+</body>
+</html>
